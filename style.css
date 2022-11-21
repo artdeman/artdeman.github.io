@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Barlow', sans-serif;
+}
+.logo a {
+    width: 6rem;
+    border: solid 1px;
+}
+.navbar {
+    background-color: #322929;
+}
+nav > .navbar-nav a {
+    color: white;
+    margin-left: 20px;
+}
+nav > .navbar-dark .navbar-nav .nav-link a:hover {
+    color: rgb(143, 186, 186);
+}
+#navbarToggleExternalContent {
+    justify-content: flex-end;
+}
+
+section > .lni {
+    font-size: 3rem;
+}
+#apropos {
+    text-align: center;
+    padding: 40px;
+}
+.title-bold{
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+}
+.title-new-post-h2{
+    font-size: 10rem;
+    text-align: center;
+    font-weight: 700;
+}
+.title-logo-typo{
+    font-size: 4rem;
+    text-align: center;
+    font-weight: 700;
+}
+.card-article{
+    background-color:  rgb(231, 231, 231);
+    border: solid 5px white;
+}
+.footer{
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    background-color: rgb(50, 41, 41);
+}

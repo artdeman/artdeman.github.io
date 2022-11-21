@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog Django</title>
-    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="style.css">
     <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
@@ -42,7 +42,33 @@
         </nav>
     </header>
     <main>
-            
+        <section id="apropos" class="container-fluid">
+            <i class="lni lni-code"></i>
+            <h1>Bienvenue sur mon tout premier blog avec Django</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis iste facilis aliquam non hic adipisci ullam illo, quasi a ?</p>
+        </section>
+        <section class="#">
+            <h2 class="title-new-post-h2">NEW ITEM</h2>
+        </section>
+        <section id="card" class="">
+            <div id="new-item" class="container-fluid">
+                <div class="row">
+                    <div class="container-fluid col-lg-">
+                        <div class="row">
+                        {% for article in articles %}
+                            <div class="card-article col-sm-6 p-3">
+                                <h6>{{ article.publication_date }}</h6>
+                                <h3>{{ article.titre }}</h3>
+                                <p class="col-sm-">{{ article.description }}<a href="{% url 'articles:article_detail' article.id %}"><button type="button" class="btn font-weight-bold"><i class="lni lni-arrow-right"></i>&nbsp;Lire la suite</button></a>
+                                </p>
+                                <a href="{% url 'articles:article_comment_detail' article.id %}"><button type="button" class="btn font-weight-bold"><i class="lni lni-arrow-right"></i>&nbsp;Lire les commentaires</button></a>
+                            </div>
+                        {% endfor %}
+                        </div>
+                    
+                </div>
+            </div>
+        </section>
     </main>
     <footer class="footer container-fluid m-a col-lg-">
         <div class="logo d-flex col-sm-12 m-a p-4 justify-content-center">
